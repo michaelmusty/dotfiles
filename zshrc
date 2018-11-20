@@ -3,6 +3,8 @@ PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+# Timestamps
+HIST_STAMPS="mm/dd/yyyy"
 
 #ZSH_DISABLE_COMPFIX=true
 
@@ -69,6 +71,11 @@ alias vagdestroy='vagrant destroy'
 alias vagssh='vagrant ssh'
 alias vaghalt='vagrant halt'
 
+# server Aliases
+alias gauss='ssh mjmusty@math.dartmouth.edu'
+alias doob='ssh mjmusty@doob.dartmouth.edu'
+alias toby='ssh mjmusty@toby.dartmouth.edu'
+
 ## Miscellaneous Aliases
 #alias htop='sudo htop'
 alias htop='htop'
@@ -79,9 +86,18 @@ qfind () {
   find . -exec grep -l -s $1 {} \;
   return 0
 }
+up() {
+  sudo apt-get update
+  sudo apt-get upgrade
+  upgrade_oh_my_zsh
+}
+tc() {
+  latexmk --enable-write18 -pdf -pdflatex="xelatex %O %S" $1
+  latexmk -c
+}
+tp() {
+  latexmk --enable-write18 -pdf -pdflatex="xelatex %O %S" -pv $1
+  latexmk -c
+}
 
-# Custom exports
-## Set EDITOR to /usr/bin/vim if Vim is installed
-if [ -f /usr/bin/vim ]; then
-  export EDITOR=/usr/bin/vim
-fi
+##### appends #####
