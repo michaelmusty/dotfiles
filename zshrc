@@ -44,6 +44,9 @@ if [ -f $HOME/.profile ]; then
   source $HOME/.profile  # Read Mac .profile, if present.
 fi
 
+# capslock
+setxkbmap -option caps:escape
+
 # Shell Aliases
 ## Git Aliases
 alias gs='git status '
