@@ -23,7 +23,7 @@ if [ -e /opt/local/bin/fortune ]; then
 fi
 
 # Capslock<-Esc
-setxkbmap -option caps:escape
+# setxkbmap -option caps:escape
 
 ##############################################################################
 # 02. Aliases                                                                #

@@ -4,15 +4,18 @@ PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+#
+ZSH_DISABLE_COMPFIX=true
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="xiong-chiamiov-plus"
+ZSH_THEME="xiong-chiamiov-plus"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="bullet-train"
+#ZSH_THEME="bullet-train"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -31,7 +34,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx zsh-syntax-highlighting brew repo sudo knife vagrant bundler web-search)
+plugins=(git zsh-syntax-highlighting repo sudo web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -45,7 +48,7 @@ if [ -f $HOME/.profile ]; then
 fi
 
 # capslock
-setxkbmap -option caps:escape
+#setxkbmap -option caps:escape
 
 # Shell Aliases
 ## Git Aliases
@@ -68,7 +71,7 @@ alias vagssh='vagrant ssh'
 alias vaghalt='vagrant halt'
 
 ## Miscellaneous Aliases
-alias htop='sudo htop'
+#alias htop='sudo htop'
 
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
