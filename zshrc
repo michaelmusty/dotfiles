@@ -72,6 +72,7 @@ alias vaghalt='vagrant halt'
 
 ## Miscellaneous Aliases
 #alias htop='sudo htop'
+alias htop='htop'
 
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
