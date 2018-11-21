@@ -36,7 +36,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx zsh-syntax-highlighting brew repo sudo knife vagrant bundler web-search)
+plugins=(git zsh-syntax-highlighting repo sudo knife vagrant bundler web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,6 +88,8 @@ qfind () {
   return 0
 }
 up() {
+  sudo tlmgr update --self
+  sudo tlmgr update --all
   sudo apt-get update
   sudo apt-get upgrade
   upgrade_oh_my_zsh
