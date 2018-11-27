@@ -94,6 +94,7 @@ set smarttab              " use tabs at the start of a line, spaces elsewhere
 
 set clipboard=unnamedplus
 set foldmethod=indent
+setlocal spell spelllang=en_us
 
 " Prettify JSON files making them easier to read
 command PrettyJSON %!python -m json.tool
