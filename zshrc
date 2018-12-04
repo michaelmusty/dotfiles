@@ -110,6 +110,7 @@ tp() {
 up_website() {
   cd ~/Projects/michaelmusty.github.io
   bundle update
+  bundle exec jekyll build
   git add --all
   git commit -m $1
   git push
