@@ -107,5 +107,12 @@ tp() {
   latexmk --enable-write18 -pdf -pdflatex="xelatex %O %S" -pv $1
   latexmk -c
 }
+up_website() {
+  cd ~/Projects/michaelmusty.github.io
+  bundle update
+  git add --all
+  git commit -m $1
+  git push
+}
 
 ##### appends #####
