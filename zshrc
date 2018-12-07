@@ -89,6 +89,9 @@ alias toby='ssh mjmusty@toby.dartmouth.edu'
 #alias htop='sudo htop'
 alias htop='htop'
 
+## rust aliases
+alias rg=~/Projects/ripgrep/target/release/rg
+
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
