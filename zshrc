@@ -6,6 +6,9 @@ PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
 export GEM_HOME=$HOME/gems
 export PATH=$HOME/gems/bin:$PATH
 
+#rust path not needed
+#export PATH=$HOME/.cargo/bin:$PATH
+
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
