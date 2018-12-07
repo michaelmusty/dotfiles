@@ -96,11 +96,13 @@ qfind () {
   return 0
 }
 up() {
+  upgrade_oh_my_zsh
   sudo tlmgr update --self
   sudo tlmgr update --all
   sudo apt-get update
   sudo apt-get upgrade
-  upgrade_oh_my_zsh
+  rustup update
+  rustc --version
 }
 tc() {
   latexmk --enable-write18 -pdf -pdflatex="xelatex %O %S" $1
