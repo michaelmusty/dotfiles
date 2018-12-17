@@ -1,7 +1,7 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "TPOPE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 execute pathogen#infect()
-syntax on
-filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Filename: .vimrc                                                         "
@@ -21,7 +21,7 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 01. General                                                                "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
+"set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Events                                                                 "
@@ -96,7 +96,6 @@ set smarttab              " use tabs at the start of a line, spaces elsewhere
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 06. Custom Commands                                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader="-"
 set clipboard=unnamedplus
 set foldmethod=indent
 setlocal spell spelllang=en_us
@@ -104,4 +103,3 @@ set shellcmdflag=-ic
 
 " Prettify JSON files making them easier to read
 command PrettyJSON %!python -m json.tool
-
