@@ -96,7 +96,7 @@ set smarttab              " use tabs at the start of a line, spaces elsewhere
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 06. Custom Commands                                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+let mapleader="-"
 set clipboard=unnamedplus
 set foldmethod=indent
 setlocal spell spelllang=en_us
