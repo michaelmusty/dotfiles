@@ -1,3 +1,8 @@
+"TPOPE
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Filename: .vimrc                                                         "
 " Maintainer: Michael J. Smalley <michaeljsmalley@gmail.com>                 "
