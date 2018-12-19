@@ -476,13 +476,29 @@ nnoremap <Leader>l :lcd ../
 nnoremap <Leader>o :!open<Space>
 
 " Git-related
-nnoremap <Leader>ga :Git add %<CR>
-nnoremap SS :Gstatus<CR>
-" nnoremap <Leader>a :exe ":GitGutterStageHunk"<CR>
-nnoremap <Leader>c :Gcommit -m 
-" command! Hpreview GitGutterPreviewHunk
-" command! Hnext GitGutterNextHunk
-" command! Hprev GitGutterPrevHunk
+" fugitive git bindings
+nnoremap <space>ga :Git add %:p<CR><CR>
+nnoremap <space>gs :Gstatus<CR>
+nnoremap <space>gc :Gcommit -v -q<CR>
+nnoremap <space>gt :Gcommit -v -q %:p<CR>
+nnoremap <space>gd :Gdiff<CR>
+nnoremap <space>ge :Gedit<CR>
+nnoremap <space>gr :Gread<CR>
+nnoremap <space>gw :Gwrite<CR><CR>
+nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <space>gp :Ggrep<Space>
+nnoremap <space>gm :Gmove<Space>
+nnoremap <space>gb :Git branch<Space>
+nnoremap <space>go :Git checkout<Space>
+nnoremap <space>gps :Dispatch! git push<CR>
+nnoremap <space>gpl :Dispatch! git pull<CR>
+" nnoremap <Leader>ga :Git add %<CR>
+" nnoremap SS :Gstatus<CR>
+" " nnoremap <Leader>a :exe ":GitGutterStageHunk"<CR>
+" nnoremap <Leader>c :Gcommit -m 
+" " command! Hpreview GitGutterPreviewHunk
+" " command! Hnext GitGutterNextHunk
+" " command! Hprev GitGutterPrevHunk
 
 " Update git-gutter signs as soon as possible after stop typing event
 " set updatetime=100
