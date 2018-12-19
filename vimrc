@@ -50,6 +50,10 @@ Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
 
+Plug 'easymotion/vim-easymotion'
+Plug 'lervag/vimtex'
+Plug 'petRUShka/vim-magma'
+
 " Not used atm
 " Plug 'cakebaker/scss-syntax.vim'
 " Plug 'tomasr/molokai'
@@ -119,7 +123,7 @@ endif
 " Configure backspace
 set backspace=eol,start,indent
 " Actually disable backspace so I just use <C-h>
-inoremap <BS> <Nop>
+" inoremap <BS> <Nop>
 
 " Jump to next/previous line when moving left/right
 " set whichwrap+=<,>
@@ -458,6 +462,10 @@ nnoremap <c-w>o :tab sp<CR>
 " MRZOOL: Leader mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" tex related
+nnoremap <Leader>a :!{arara %}<CR>
+nnoremap <Leader><Leader> :silent !evince '%:r'.pdf<CR>
+
 " Open file explorer
 nnoremap <Leader>e  :e.<CR>
 nnoremap <Leader>v  :Vex!<CR>
@@ -468,15 +476,16 @@ nnoremap <Leader>l :lcd ../
 nnoremap <Leader>o :!open<Space>
 
 " Git-related
+nnoremap <Leader>ga :Git add %<CR>
 nnoremap SS :Gstatus<CR>
-nnoremap <Leader>a :exe ":GitGutterStageHunk"<CR>
+" nnoremap <Leader>a :exe ":GitGutterStageHunk"<CR>
 nnoremap <Leader>c :Gcommit -m 
-command! Hpreview GitGutterPreviewHunk
-command! Hnext GitGutterNextHunk
-command! Hprev GitGutterPrevHunk
+" command! Hpreview GitGutterPreviewHunk
+" command! Hnext GitGutterNextHunk
+" command! Hprev GitGutterPrevHunk
 
 " Update git-gutter signs as soon as possible after stop typing event
-set updatetime=100
+" set updatetime=100
 
 " Copy/paste to system clipboard
 vmap <Leader>y "+y
@@ -527,6 +536,45 @@ vnoremap <leader>n d:new<CR>P
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MRZOOL: Plugins Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vimtex
+let g:vimtex_echo_ignore_wait = 1
+let g:tex_flavor = 'xelatex'
+" let g:tex_flavor = 'latex'
+" EDGAR vimtex
+" let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+" let g:vimtex_view_general_options = '-g -r @line @pdf @tex'
+
+" vim-magma
+" this is pretty hacky... :P
+autocmd BufRead,BufNewFile *.mag  set filetype=magma omnifunc=CompleteMagma
+autocmd BufRead,BufNewFile *.mag let do_syntax_sel_menu = 1|runtime! synmenu.vim|aunmenu &Syntax
+autocmd BufRead,BufNewFile *.mag cal SetSyn("matlab")
+autocmd BufRead,BufNewFile *.mag cal SetSyn("magma")
+autocmd BufRead,BufNewFile *.m  set filetype=magma omnifunc=CompleteMagma
+autocmd BufRead,BufNewFile *.m let do_syntax_sel_menu = 1|runtime! synmenu.vim|aunmenu &Syntax
+autocmd BufRead,BufNewFile *.m cal SetSyn("matlab")
+autocmd BufRead,BufNewFile *.m cal SetSyn("magma")
+
+" easy motion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+" nmap s <Plug>(easymotion-overwin-f)
+"
+" or
+"
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 " Netrw Settings
 let g:netrw_preview   = 1
@@ -706,7 +754,9 @@ endif
 set clipboard=unnamedplus
 set foldmethod=indent
 " setlocal spell spelllang=en_us
-set shellcmdflag=-ic
+" set shellcmdflag=-ic
 
 " Prettify JSON files making them easier to read
 command PrettyJSON %!python -m json.tool
+
+
