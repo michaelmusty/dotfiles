@@ -1,4 +1,4 @@
-"set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
+""set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 if !has('nvim')
   set nocompatible
 endif
@@ -10,8 +10,68 @@ filetype indent on
 " 01. Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
+Plug 'mattn/webapi-vim'
+Plug 'chiel92/vim-autoformat'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-liquid'
+Plug 'keith/tmux.vim'
+Plug 'tpope/vim-git'
+Plug 'hdima/python-syntax'
+Plug 'stephenway/postcss.vim'
+Plug 'tpope/vim-markdown'
+Plug 'mrzool/mustache.vim'
+Plug 'StanAngeloff/php.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-vinegar'
+" Plug 'airblade/vim-gitgutter'
+Plug 'sjl/gundo.vim'
+Plug 'terryma/vim-smooth-scroll'
+
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/grep.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'Raimondi/delimitMate'
+"Plug 'scrooloose/syntastic'
+
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-abolish'
+
+" Not used atm
+" Plug 'cakebaker/scss-syntax.vim'
+" Plug 'tomasr/molokai'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'mrtazz/simplenote.vim'
+" Plug 'junegunn/vim-xmark'
+" Plug 'garbas/vim-snipmate'
+" Plug 'honza/vim-snippets'
+" Plug '0x0dea/vim-molasses'
+" Plug 'christoomey/vim-tmux-navigator'
+" Plug 'benmills/vimux'
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
+" Plug 'liamcurry/tumblr.vim'
+" Plug 'captbaritone/better-indent-support-for-php-with-html'
+" Plug 'rust-lang/rust.vim'
+" Plug 'cespare/vim-toml'
+" Plug 'mattn/gist-vim'
+" Plug 'rlue/vim-barbaric'
+
 call plug#end()
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
