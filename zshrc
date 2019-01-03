@@ -2,6 +2,14 @@
 PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
 PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
 
+#gems
+export GEM_HOME=$HOME/gems
+export PATH=$HOME/gems/bin:$PATH
+
+#rust path not needed
+#export PATH=$HOME/.cargo/bin:$PATH
+
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 # Timestamps
@@ -37,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git zsh-syntax-highlighting repo sudo web-search)
+plugins=(git zsh-syntax-highlighting repo sudo knife vagrant bundler web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,6 +90,9 @@ alias toby='ssh mjmusty@toby.dartmouth.edu'
 #alias htop='sudo htop'
 alias htop='htop'
 
+## rust aliases
+alias rg=~/Projects/ripgrep/target/release/rg
+
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
@@ -89,9 +100,13 @@ qfind () {
   return 0
 }
 up() {
+  upgrade_oh_my_zsh
+  sudo tlmgr update --self
+  sudo tlmgr update --all
   sudo apt-get update
   sudo apt-get upgrade
-  upgrade_oh_my_zsh
+  rustup update
+  rustc --version
 }
 tc() {
   latexmk --enable-write18 -pdf -pdflatex="xelatex %O %S" $1
@@ -100,6 +115,14 @@ tc() {
 tp() {
   latexmk --enable-write18 -pdf -pdflatex="xelatex %O %S" -pv $1
   latexmk -c
+}
+up_website() {
+  cd ~/Projects/michaelmusty.github.io
+  bundle update
+  bundle exec jekyll build
+  git add --all
+  git commit -m $1
+  git push
 }
 
 ##### appends #####
