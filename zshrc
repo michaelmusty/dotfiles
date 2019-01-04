@@ -59,7 +59,7 @@ if [ -f $HOME/.profile ]; then
 fi
 
 # capslock
-#setxkbmap -option caps:escape
+setxkbmap -option caps:escape
 
 # Shell Aliases
 ## Git Aliases
