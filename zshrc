@@ -22,11 +22,11 @@ ZSH_DISABLE_COMPFIX=true
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="xiong-chiamiov-plus"
+# ZSH_THEME="xiong-chiamiov-plus"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
-#ZSH_THEME="bullet-train"
+ZSH_THEME="bullet-train"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -45,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git zsh-syntax-highlighting repo sudo knife vagrant bundler web-search)
+plugins=(git zsh-syntax-highlighting repo sudo bundler web-search)
 
 source $ZSH/oh-my-zsh.sh
 
