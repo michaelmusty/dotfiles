@@ -57,6 +57,9 @@ Plug 'petRUShka/vim-magma'
 " completion
 Plug 'maralla/completor.vim'
 
+" bookmark
+Plug 'MattesGroeger/vim-bookmarks'
+
 " Not used atm
 " Plug 'cakebaker/scss-syntax.vim'
 " Plug 'tomasr/molokai'
