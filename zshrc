@@ -138,5 +138,10 @@ up_website() {
   git commit -m $1
   git push
 }
+adjust_brightness() {
+  # xrandr | grep " connected" | cut -f1 -d " "
+  # eDP-1
+  xrandr --output eDP-1 --brightness $1
+}
 
 ##### appends #####
