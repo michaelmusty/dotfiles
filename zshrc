@@ -3,8 +3,8 @@ PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:
 PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
 PATH=/home/mjmusty/anaconda3/bin:$PATH
 
-MAGMAPASSFILE=/usr/local/magma/magmapassfile
-export MAGMAPASSFILE
+# MAGMAPASSFILE=/usr/local/magma/magmapassfile
+# export MAGMAPASSFILE
 
 #gems
 export GEM_HOME=$HOME/gems
