@@ -216,7 +216,7 @@ set autoindent
 " set cindent
 
 " Wrap related
-set nowrap " Leave text alone unless otherwise specified
+" set nowrap " Leave text alone unless otherwise specified
 set textwidth=0 " Never insert line-breaks in text
 set wrapmargin=0
 
