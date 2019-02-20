@@ -53,6 +53,7 @@ Plug 'tpope/vim-abolish'
 Plug 'easymotion/vim-easymotion'
 Plug 'lervag/vimtex'
 Plug 'petRUShka/vim-magma'
+" Plug 'petRUShka/vim-sage'
 
 " completion
 Plug 'maralla/completor.vim'
@@ -580,6 +581,11 @@ autocmd BufRead,BufNewFile *.m let do_syntax_sel_menu = 1|runtime! synmenu.vim|a
 autocmd BufRead,BufNewFile *.m cal SetSyn("matlab")
 autocmd BufRead,BufNewFile *.m cal SetSyn("magma")
 
+" Sagemath settings (from Franco Saliola)
+autocmd BufRead,BufNewFile *.sage,*.pyx,*.spyx set filetype=python
+autocmd Filetype python set tabstop=4|set shiftwidth=4|set expandtab
+autocmd FileType python set makeprg=sage\ -b\ &&\ sage\ -t\ %
+
 " easy motion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
@@ -789,5 +795,3 @@ set foldmethod=indent
 
 " Prettify JSON files making them easier to read
 command PrettyJSON %!python -m json.tool
-
-
