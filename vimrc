@@ -395,7 +395,6 @@ set helpheight=12
 " (https://ddrscott.github.io/blog/2016/sidescroll/)
 set sidescroll=1
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MRZOOL: Abbreviations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -472,6 +471,12 @@ nnoremap <c-w>o :tab sp<CR>
 " tex related
 nnoremap <Leader>a :!{arara %}<CR>
 nnoremap <Leader><Leader> :silent !evince '%:r'.pdf<CR>
+
+" musty related
+
+" delete  line breaks throughout current buffer
+" doesn't work but here for reminder
+" nnoremap <Leader>a :%s///g<CR>
 
 " Open file explorer
 nnoremap <Leader>e  :e.<CR>
