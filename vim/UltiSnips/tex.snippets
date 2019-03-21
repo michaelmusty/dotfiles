@@ -54,11 +54,11 @@ snippet table "Table environment" b
 endsnippet
 
 snippet fig "Figure environment" b
-\begin{figure}[${1:htpb}]
+\begin{figure}[${1:ht}]
 	\centering
-	${2:\includegraphics[width=0.8\textwidth]{$3}}
-	\caption{${4:$3}}
-	\label{fig:${5:${3/\W+/-/g}}}
+	$0
+	\caption{${2:}}
+	\label{fig:${3:}}
 \end{figure}
 endsnippet
 
@@ -108,14 +108,14 @@ endsnippet
 
 snippet dm "Math" wA
 \[
-${1:${VISUAL}}
-.\] $0
+	$0
+\]
 endsnippet
 
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 
