@@ -55,9 +55,6 @@ Plug 'lervag/vimtex'
 Plug 'petRUShka/vim-magma'
 " Plug 'petRUShka/vim-sage'
 
-" completion
-Plug 'maralla/completor.vim'
-
 " bookmark
 Plug 'MattesGroeger/vim-bookmarks'
 
@@ -66,6 +63,9 @@ Plug 'sirver/ultisnips'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+" completion
+Plug 'maralla/completor.vim'
 
 " Not used atm
 " Plug 'cakebaker/scss-syntax.vim'
@@ -477,6 +477,7 @@ nnoremap <c-w>o :tab sp<CR>
 " tex related
 nnoremap <Leader>a :!{arara %}<CR>
 nnoremap <Leader><Leader> :silent !evince '%:r'.pdf<CR>
+" nnoremap <Leader><Leader> :silent !zathura '%:r'.pdf<CR>
 
 " musty related
 
