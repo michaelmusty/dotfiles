@@ -61,6 +61,12 @@ Plug 'maralla/completor.vim'
 " bookmark
 Plug 'MattesGroeger/vim-bookmarks'
 
+"UltiSnips
+Plug 'sirver/ultisnips'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
 " Not used atm
 " Plug 'cakebaker/scss-syntax.vim'
 " Plug 'tomasr/molokai'
@@ -569,11 +575,17 @@ vnoremap <leader>n d:new<CR>P
 
 " vimtex
 let g:vimtex_echo_ignore_wait = 1
-let g:tex_flavor = 'xelatex'
-" let g:tex_flavor = 'latex'
+" let g:tex_flavor = 'xelatex'
+let g:tex_flavor = 'latex'
 " EDGAR vimtex
 " let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
 " let g:vimtex_view_general_options = '-g -r @line @pdf @tex'
+" https://castel.dev/post/lecture-notes-1/
+" let g:tex_flavor='latex'
+" let g:vimtex_view_method='zathura'
+" let g:vimtex_quickfix_mode=0
+" set conceallevel=1
+" let g:tex_conceal='abdmg'
 
 " vim-magma
 " this is pretty hacky... :P
@@ -662,9 +674,9 @@ let g:syntastic_html_tidy_ignore_errors = [
 			\ ]
 
 " Snipmate settings
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['liquid'] = 'liquid,html' " loads HTML snippets in liquid files
+" let g:snipMate = {}
+" let g:snipMate.scope_aliases = {}
+" let g:snipMate.scope_aliases['liquid'] = 'liquid,html' " loads HTML snippets in liquid files
 
 " Goyo settings
 let g:goyo_height = 70
@@ -797,6 +809,11 @@ set clipboard=unnamedplus
 set foldmethod=indent
 " setlocal spell spelllang=en_us
 " set shellcmdflag=-ic
+
+" spelling
+setlocal spell
+set spelllang=en_us
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Prettify JSON files making them easier to read
 command PrettyJSON %!python -m json.tool
