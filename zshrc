@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(web-search vi-mode urltools taskwarrior python lol last-working-dir jsontools history gem fasd git git-extras zsh-syntax-highlighting repo sudo bundler web-search command-not-found coffee compleat)
+plugins=(web-search vi-mode urltools taskwarrior python lol last-working-dir jsontools history gem fasd git git-extras repo sudo bundler web-search command-not-found coffee compleat)
 
 source $ZSH/oh-my-zsh.sh
 
