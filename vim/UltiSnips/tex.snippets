@@ -127,10 +127,10 @@ endsnippet
 # \\frac{${VISUAL}}{$1}$0
 # endsnippet
 
-context "math()"
-snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
-\\frac{`!p snip.rv = match.group(1)`}{$1}$0
-endsnippet
+# context "math()"
+# snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
+# \\frac{`!p snip.rv = match.group(1)`}{$1}$0
+# endsnippet
 
 # priority 1000
 # context "math()"
@@ -286,9 +286,9 @@ snippet prod "product" w
 \prod_{${1:n=${2:1}}}^{${3:\infty}} ${4:${VISUAL}} $0
 endsnippet
 
-snippet part "d/dx" w
-\frac{\partial ${1:V}}{\partial ${2:x}} $0
-endsnippet
+# snippet part "d/dx" w
+# \frac{\partial ${1:V}}{\partial ${2:x}} $0
+# endsnippet
 
 context "math()"
 snippet sq "\sqrt{}" iA
@@ -335,15 +335,15 @@ snippet >= "geq" iA
 \ge 
 endsnippet
 
-context "math()"
-snippet EE "geq" iA
-\exists 
-endsnippet
+# context "math()"
+# snippet EE "geq" iA
+# \exists 
+# endsnippet
 
-context "math()"
-snippet AA "forall" iA
-\forall 
-endsnippet
+# context "math()"
+# snippet AA "forall" iA
+# \forall 
+# endsnippet
 
 context "math()"
 snippet xnn "xn" iA
@@ -508,7 +508,7 @@ endsnippet
 
 context "math()"
 snippet set "set" wA
-\\{$1\\} $0
+\\{$1\\}$0
 endsnippet
 
 snippet || "mid" iA
@@ -606,32 +606,39 @@ snippet cvec "column vector" iA
 \begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots\\\\ $1_${2:n} \end{pmatrix}
 endsnippet
 
-priority 10
-context "math()"
-snippet "bar" "bar" riA
-\overline{$1}$0
-endsnippet
+# priority 10
+# context "math()"
+# snippet "bar" "bar" riA
+# \overline{$1}$0
+# endsnippet
 
-priority 100
-context "math()"
-snippet "([a-zA-Z])bar" "bar" riA
-\overline{`!p snip.rv=match.group(1)`}
-endsnippet
+# priority 100
+# context "math()"
+# snippet "([a-zA-Z])bar" "bar" riA
+# \overline{`!p snip.rv=match.group(1)`}
+# endsnippet
 
-priority 10
-context "math()"
-snippet "hat" "hat" riA
-\hat{$1}$0
-endsnippet
+# priority 10
+# context "math()"
+# snippet "hat" "hat" riA
+# \hat{$1}$0
+# endsnippet
 
-priority 100
-context "math()"
-snippet "([a-zA-Z])hat" "hat" riA
-\hat{`!p snip.rv=match.group(1)`}
-endsnippet
+# priority 100
+# context "math()"
+# snippet "([a-zA-Z])hat" "hat" riA
+# \hat{`!p snip.rv=match.group(1)`}
+# endsnippet
 
-snippet letw "let omega" iA
-Let $\Omega \subset \C$ be open.
-endsnippet
+# snippet letw "let omega" iA
+# Let $\Omega \subset \C$ be open.
+# endsnippet
 
 # vim:ft=snippets
+
+#### musty
+snippet lab "label"
+\label{$1}
+$0
+endsnippet
+

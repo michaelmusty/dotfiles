@@ -483,6 +483,7 @@ nnoremap <Leader><Leader> :silent !evince '%:r'.pdf<CR>
 
 " delete  line breaks throughout current buffer
 " doesn't work but here for reminder
+" ctrl-v ctrl-M
 " nnoremap <Leader>a :%s///g<CR>
 
 " Open file explorer
