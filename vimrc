@@ -475,9 +475,10 @@ nnoremap <c-w>o :tab sp<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " tex related
-nnoremap <Leader>a :!{arara %}<CR>
-nnoremap <Leader><Leader> :silent !evince '%:r'.pdf<CR>
-" nnoremap <Leader><Leader> :silent !zathura '%:r'.pdf<CR>
+nnoremap <Leader>a :!{arara %}<CR><CR>
+nnoremap <Leader>av :!{arara -v %}<CR>
+" nnoremap <Leader><Leader> :silent !evince '%:r'.pdf<CR>
+nnoremap <Leader><Leader> :silent !zathura '%:r'.pdf&<CR>
 
 " musty related
 
