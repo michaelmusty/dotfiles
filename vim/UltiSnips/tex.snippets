@@ -112,11 +112,11 @@ snippet dm "Math" wA
 \]
 endsnippet
 
-snippet ali "Align" bA
-\begin{align*}
-	${1:${VISUAL}}
-\end{align*}
-endsnippet
+# snippet ali "Align" bA
+# \begin{align*}
+# 	${1:${VISUAL}}
+# \end{align*}
+# endsnippet
 
 # context "math()"
 # snippet // "Fraction" iA
@@ -441,10 +441,10 @@ endsnippet
 # *
 # endsnippet
 
-context "math()"
-snippet norm "norm" iA
-\|$1\|$0
-endsnippet
+# context "math()"
+# snippet norm "norm" iA
+# \|$1\|$0
+# endsnippet
 
 # priority 100
 # context "math()"
@@ -642,3 +642,82 @@ snippet lab "label"
 $0
 endsnippet
 
+snippet split "align enviroment with split and label"
+\begin{align}
+	\label{eqn:$1}
+	\begin{split}
+		$0
+	\end{split}
+\end{align}
+endsnippet
+
+snippet eqn "equation environment"
+\begin{equation}
+	\label{eqn:$1}
+	$0
+\end{equation}
+endsnippet
+
+snippet tikzcd "tikzcd environment"
+\begin{equation}
+	\label{eqn:$1}
+	\begin{tikzcd}
+		$0
+	\end{tikzcd}
+\end{equation}
+endsnippet
+
+snippet def "definition enviroment"
+\begin{definition}
+	\label{def:$1}
+	$0
+\end{definition}
+endsnippet
+
+snippet lem "lemma environment"
+\begin{lemma}
+	\label{lem:$1}
+	$0
+\end{lemma}
+endsnippet
+
+snippet thm "theorem environment"
+\begin{theorem}
+	\label{thm:$1}
+	$0
+\end{theorem}
+endsnippet
+
+snippet cor "corr environment"
+\begin{corr}
+	\label{cor:$1}
+	$0
+\end{corr}
+endsnippet
+
+snippet exm "example enviroment"
+\begin{example}
+	\label{exm:$1}
+	$0
+\end{example}
+endsnippet
+
+snippet alg "algorithm enviroment"
+\begin{alg}
+	\label{alg:$1}
+	$0
+\end{alg}
+endsnippet
+
+snippet proof "proof enviroment"
+\begin{proof}
+	$0
+\end{proof}
+endsnippet
+
+snippet rmk "remark enviroment"
+\begin{remark}
+	\label{rmk:$1}
+	$0
+\end{remark}
+endsnippet
