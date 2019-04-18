@@ -485,10 +485,10 @@ snippet compl "complement" iA
 ^{c}
 endsnippet
 
-# context "math()"
-# snippet \\\ "setminus" iA
-# \setminus
-# endsnippet
+context "math()"
+snippet \\\ "setminus" iA
+\setminus
+endsnippet
 
 # snippet >> ">>" iA
 # \gg
@@ -720,4 +720,15 @@ snippet rmk "remark enviroment"
 	\label{rmk:$1}
 	$0
 \end{remark}
+endsnippet
+
+snippet mag "magma textsf"
+\textsf{Magma}$0
+endsnippet
+
+snippet claim "claim enviroment"
+\begin{claim}
+	\label{claim:$1}
+	$0
+\end{claim}
 endsnippet
