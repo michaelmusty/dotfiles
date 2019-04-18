@@ -249,7 +249,7 @@ autocmd FileType mail setlocal formatoptions+=aw
 " set iskeyword+=-
 
 " Consider < and > a pair
-set matchpairs+=<:>
+" set matchpairs+=<:>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MRZOOL: User Interface
@@ -329,23 +329,23 @@ set t_Co=256
 syntax enable
 
 " Colorscheme settings
-if has("unix")
-  let s:uname = system("uname")
-  if s:uname == "Darwin\n"
-    " Settings for iTerm2 on OS X
-    set background=dark
-    let base16colorspace=256
-    colorscheme base16-ocean
-    hi Normal guibg=NONE ctermbg=NONE
-  else
-    " Settings for Terminator on Linux
-    let g:molokai_original=1
-    let g:rehash256=1
-    colorscheme molokai
-    " Transparent background
-    hi Normal guibg=NONE ctermbg=NONE
-  endif
-endif
+" if has("unix")
+"   let s:uname = system("uname")
+"   if s:uname == "Darwin\n"
+"     " Settings for iTerm2 on OS X
+"     set background=dark
+"     let base16colorspace=256
+"     colorscheme base16-ocean
+"     hi Normal guibg=NONE ctermbg=NONE
+"   else
+"     " Settings for Terminator on Linux
+"     let g:molokai_original=1
+"     let g:rehash256=1
+"     colorscheme molokai
+"     " Transparent background
+"     hi Normal guibg=NONE ctermbg=NONE
+"   endif
+" endif
 
 set termguicolors
 
@@ -493,7 +493,7 @@ nnoremap <Leader>v  :Vex!<CR>
 nnoremap <Leader>s  :Hex<CR>
 nnoremap <Leader>t  :Tex<CR>
 
-nnoremap <Leader>l :lcd ../
+" nnoremap <Leader>l :lcd ../
 nnoremap <Leader>o :!open<Space>
 
 " Git-related
@@ -577,6 +577,7 @@ vnoremap <leader>n d:new<CR>P
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " vimtex
+let maplocalleader="\\"
 let g:vimtex_echo_ignore_wait = 1
 " let g:tex_flavor = 'xelatex'
 let g:tex_flavor = 'latex'
@@ -770,13 +771,13 @@ augroup markdown
 augroup END
 
 " Highlight characters that go over 80 columns (by drawing a border on the 81st)
-if exists('+colorcolumn')
-  set colorcolumn=81
-  highlight ColorColumn ctermbg=red
-else
-  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-  match OverLength /\%81v.\+/
-endif
+" if exists('+colorcolumn')
+"   set colorcolumn=81
+"   highlight ColorColumn ctermbg=red
+" else
+"   highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"   match OverLength /\%81v.\+/
+" endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI
