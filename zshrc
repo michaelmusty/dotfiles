@@ -148,5 +148,11 @@ adjust_brightness() {
   # eDP-1
   xrandr --output eDP-1 --brightness $1
 }
+d3ssins_push () {
+  cd ~/Projects/d3ssins/
+  git add --all
+  git commit -m "update"
+  git push
+}
 
 ##### appends #####
