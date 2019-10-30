@@ -2,6 +2,7 @@
 PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
 PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
 # PATH=/home/mjmusty/anaconda3/bin:$PATH
+PATH=/home/mjmusty/sagebuild/bin:$PATH
 
 # MAGMAPASSFILE=/usr/local/magma/magmapassfile
 # export MAGMAPASSFILE
@@ -156,3 +157,6 @@ d3ssins_push () {
 }
 
 ##### appends #####
+
+# added by travis gem
+[ -f /home/mjmusty/.travis/travis.sh ] && source /home/mjmusty/.travis/travis.sh
